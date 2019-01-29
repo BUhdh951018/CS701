@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <title>Random Color example</title>
+
+<head>
+        <script src="randomColor.js"></script>
+</head>
+  
+ <body> 
+  <canvas id="testCanvas" style="border: 1px solid;"  
+    	width="400" height="400"> </canvas>
+  <p></p>
+  <h3>Click on the above canvas to change color</h3>
+  
+  <script>
+	  (function(doc) {
+
+	    var canvas = doc.getElementById("testCanvas");
+	    var context = canvas.getContext("2d");
+	    
+	     // click event handler
+	    canvas.onclick = function(e) {
+	        var nextColor = randomColor();
+	        context.fillStyle = nextColor; 
+	        context.fillRect(0, 0, canvas.width, canvas.height);
+	    }
+	  })(document);
+  </script>
+        
+ 
+</html>

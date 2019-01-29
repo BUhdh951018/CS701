@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Accessor Properties Example</title>
+    <script type="text/javascript">
+
+        var project = {
+            _year: 2010,
+            version: 1
+        };
+          
+        Object.defineProperty(project, "year", {
+            get: function(){
+                return this._year;
+            },
+            set: function(newValue){
+            
+                if (newValue > 2010) {
+                    this._year = newValue;
+                    this.version += (newValue - 2010);
+                }
+            }
+        });
+        
+        console.log(project.year);      // 2010
+        console.log(project.version);   // 1
+        
+        project.year = 2014;
+       
+        console.log(project.year);      // 2014
+        console.log(project.version);   // 5
+       
+    </script>
+</head>
+<body>
+			<b>Output logged to console...</b>
+</body>
+</html>

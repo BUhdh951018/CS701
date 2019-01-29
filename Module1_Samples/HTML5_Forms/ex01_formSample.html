@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Form Sample</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href = "html5.css">
+</head>
+
+<body>
+     <section>
+      <article>
+        <h2>Sign Up Form</h2>
+        <form name="register" action="submit.php" method="post">
+        
+          <p><label for="username">User Name:</label>
+             <input id="username" name="username" type="text" required
+                    placeholder="User name (required)" ></p>
+        
+          <p><label for="emailaddress">E-mail:</label>
+             <input id="emailaddress" name="emailaddress[]" type="email"
+                    placeholder="user@company.com"></p>
+
+          <p><label for="emailaddress2">Repeat E-mail:</label>
+             <input id="emailaddress2" name="emailaddress[]" type="email"
+                    placeholder="user@company.com"></p>
+
+                    
+          <p><label for="url">Homepage: </label>
+              <input type="url" id="homeUrl" name="homeUrl"/></p>
+          
+          <p><label for="phone">Tel #:</label>
+             <input id="phone" name="phone" type="tel"
+                    placeholder="(xxx) xxx-xxx"></p>
+        
+        
+          <p><label for="dob">Date of birth:</label>
+             <input id="dob" name="dob" type="date"
+                    placeholder="MM/DD/YYYY"></p>
+         
+          <p><label for="favcolor">Favorite Color:</label>
+             <input id="favcolor" name="favcolor" type="color"
+                    value="#FF0000"></p>
+         
+        <p><label for="state_name">State : </label>
+            <input id="state_name" name="state_name" 
+                        type="text" list="stateList" /></p>
+
+            <datalist id="stateList">
+                <option value="Maine">
+                <option value="Maryland">
+                <option value="Massachusetts">
+                <option value="Michigan">
+                <option value="Minnesota">
+                <option value="Mississippi">
+                <option value="Missouri">
+                <option value="Montana">
+            </datalist>
+        
+            <p>
+            <label for="level">Experience:</label>
+            <input id="level" name="level" type="range"
+                   onchange="levelDisplay.value=this.value + ' years'"
+                   min="0" max="10" step="1" value="0">
+                   
+            <output id="levelDisplay">0 years</output></p>
+         
+            <p><label for="notes">Notes:</label>
+               <textarea id="notes" name="notes" 
+                    spellcheck="true" maxLength="140"></textarea></p>
+       
+         <p><input type="submit" name="register" value="SignUp"></p>
+         
+        </form>
+      </article>
+    </section>
+
+      <footer>
+        <p>HTML5</p>
+    </footer>
+
+    </div>
+</body>
+</html>

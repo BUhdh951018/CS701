@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Stringify Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+       var person1 = {
+            name : "Bob",
+            friends : ["Dave", "Ed"],
+            age : 25,
+            job : "Software Engineer",
+            toJSON: function() 
+                {
+                  return this.name + " - " + this.job;
+                }
+        };
+
+                
+        var jsonText = JSON.stringify(person1);
+        console.log(jsonText);
+
+    </script>
+    		<b>Output logged to console...</b>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Module Pattern Sample3</title>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/underscore.js"></script>
+    </head>
+    <body>
+        <div class="container">Sample Output</div>
+
+        <script type="text/javascript">
+			var myModule = (function(jQ, underScore) {
+
+				function privateMethod1() {
+					jQ(".container").html("Underscore min test: " + 
+					           privateMethod2());
+				}
+
+				function privateMethod2() {
+					return underScore.min([100, 50, 20, 80]);
+				}
+
+				return {
+					publicMethod : function() {
+						privateMethod1();
+					}
+				};
+				// Invoke with jQuery and Underscore
+			})(jQuery, _);
+
+			myModule.publicMethod();
+        </script>
+    </body>
+    
+</html>

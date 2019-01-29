@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Parse Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var person1 = {
+            "name" : "Bob",
+            "friends" : ["Dave", "Ed"],
+            age : 25,
+            job : "Software Engineer",
+            hireDate: new Date(2012, 4, 15)
+        };
+
+        var jsonText = JSON.stringify(person1, null, 2);
+        console.log(jsonText);
+       
+        var person2 = JSON.parse(jsonText);
+        console.log(person2.hireDate);
+        console.log(typeof person2.hireDate);
+
+        var person3 = JSON.parse(jsonText, 
+            function(key, value){
+                if (key == "hireDate"){
+                    return new Date(value);
+                } else {
+                    return value;
+                }
+            });
+        
+        console.log(person3.hireDate instanceof Date);
+        console.log(person3.hireDate.toString());
+        console.log(person3.hireDate.getFullYear());
+
+    </script>
+    		<b>Output logged to console...</b>
+</body>
+</html>

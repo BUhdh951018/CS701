@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Data Properties Example</title>
+    <script type="text/javascript">
+
+        var person = {};
+        Object.defineProperty(person, "name", {
+            enumerable : true,
+            value: "Bob"
+        });
+        Object.defineProperty(person, "age", {
+            enumerable : false,
+            value: "25"
+        });
+        Object.defineProperty(person, "job", {
+            enumerable : true,
+            value: "Software Engineer"
+        });
+        
+        for (var prop in person) {
+            console.log(prop, ":", person[prop]);
+        } 
+       
+     
+    </script>
+</head>
+<body>
+			<b>Output logged to console...</b>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>IIFE Pattern Sample1</title>
+    <script type="text/javascript" src="js/jquery.js">
+        </script>
+    <script type="text/javascript">
+  
+        // Define an anonymous function
+        (function() {
+            // code
+            console.log("Hello1");
+        })();   // invoke the function
+
+        $(document).ready(function() {
+                // code
+                console.log("Hello2");
+            });
+            
+        (function($) {
+            $(document).ready(function() {
+                // code
+                console.log("Hello3");
+            });
+        })(jQuery);
+        
+        (function(doc, window, $) {
+            $(doc).ready(function() {
+                // code
+                console.log(window.location.href);
+            });
+        })(document, window, jQuery);
+        
+    
+    </script>
+    
+    </head>
+    <body>
+		<b>Output logged to console...</b>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

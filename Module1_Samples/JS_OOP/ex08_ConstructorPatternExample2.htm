@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Constructor Pattern Example 2</title>
+    <script type="text/javascript">
+    
+        function Person(name, age, job){
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = function(){
+                console.log(this.name);
+            };
+        }
+        
+        // use as a constructor
+        var person = new Person("Bob", 25, "Software Engineer");
+        person.sayName();   //Bob
+        
+        // call as a function, adds to window
+        Person("Charlie", 30, "Architect");  
+        window.sayName();   //Charlie
+        console.log(window.name); //Charlie
+        console.log(window.age);  // 30
+        console.log(job);        // Architect
+      
+    </script>
+</head>
+<body>
+		<b>Output logged to console...</b>
+</body>
+</html>

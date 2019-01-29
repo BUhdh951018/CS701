@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Stringify Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+       var person1 = {
+            name : "Bob",
+            friends : ["Dave", "Ed"],
+            age : 25,
+            job : "Software Engineer"
+        };
+
+        var jsonText = 
+            JSON.stringify(person1, function(key, value){
+                switch(key){
+                    case "friends":
+                        return value.join(",")
+                    case "age":
+                        return undefined;
+                    default:
+                        return value;
+                }
+            });
+        console.log(jsonText);
+
+    </script>
+    		<b>Output logged to console...</b>
+</body>
+</html>

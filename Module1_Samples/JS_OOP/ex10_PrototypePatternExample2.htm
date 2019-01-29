@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Prototype Pattern Example</title>
+    <script type="text/javascript">
+                    
+        function Person(){
+        }
+        
+        Person.prototype = {
+            constructor: Person,
+            name : "Bob",
+            age : 25,
+            job : "Software Engineer",
+            sayName : function () {
+                console.log(this.name);
+            }
+        };
+        
+        var person1 = new Person();
+        person1.sayName();   //Bob
+        
+    </script>
+</head>
+<body>
+		<b>Output logged to console...</b>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Multiple Properties Example</title>
+    <script type="text/javascript">
+
+        var project = {};
+        
+        Object.defineProperties(project, {
+            _year: {
+                writable: true,
+                value: 2010
+            },
+            
+            version: {
+                writable: true,
+                value: 1
+            },
+            
+            year: {            
+                get: function(){
+                    return this._year;
+                },
+                
+                set: function(newValue){
+                    if (newValue > 2010) {
+                        this._year = newValue;
+                        this.version += (newValue - 2010);
+                    }                  
+                }            
+            }        
+        });
+           
+        console.log(project.year);      // 2010
+        console.log(project.version);   // 1
+        
+        project.year = 2020;
+        console.log(project.year);   // 2020
+        console.log(project.version);   // 11
+
+    </script>
+</head>
+<body>
+			<b>Output logged to console...</b>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Creating Objects Example</title>
+    <script type="text/javascript">
+    
+        var person = new Object();
+        person.name = "Hello, Suresh";
+        person.age = 25;
+        person.job = "Software Engineer";
+        person.sayName = function(){
+            console.log(this.name);
+        };
+        
+        person.sayName(); // Bob
+        
+        var employee = {
+            name : "Hello, John",
+            age : 25,
+            job : "Software Engineer",
+            sayName : function(){
+                console.log(this.name);
+            }
+        };
+        
+        employee.sayName(); // Bob
+
+    </script>
+</head>
+<body>
+		<b>Output logged to console...</b>
+</body>
+</html>

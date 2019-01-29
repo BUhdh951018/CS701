@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Stringify Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var person1 = {
+            name : "Bob",
+            friends : ["Dave", "Ed"],
+            age : 25,
+            job : "Software Engineer"
+        };
+
+        var jsonText1 = 
+            JSON.stringify(person1, ["name", "job"]);
+        console.log(jsonText1);
+        
+        var jsonText2 = JSON.stringify(person1, null, 2);
+        console.log(jsonText2);
+        
+        var jsonText3 = JSON.stringify(person1, null, "-*");
+        console.log(jsonText3);
+
+
+      
+    </script>
+    		<b>Output logged to console...</b>
+</body>
+</html>

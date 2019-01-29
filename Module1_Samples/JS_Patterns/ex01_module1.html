@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Module Pattern Sample1</title>
+    <script type="text/javascript">
+    
+        var testModule = (function() {
+            var counter = 0;
+            return {
+                incrementCounter : function() {
+                    return counter++;
+                },
+                resetCounter : function() {
+                    console.log("current counter value: " + counter);
+                    counter = 0;
+                }
+            };
+        })();
+
+        // Usage:
+
+        // Increment the counter
+        console.log(testModule.incrementCounter());
+        console.log(testModule.incrementCounter());
+
+        // Check the counter value and reset
+        // Outputs: 2
+        testModule.resetCounter();
+    </script>
+    </head>
+    <body>
+		<b>Output logged to console...</b>
+    </body>
+</html>

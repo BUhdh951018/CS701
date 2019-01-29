@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SVG Sample - Linear Gradients</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="html5.css">
+    </head>
+    <body>
+
+        <svg width="400" height="300">
+          <defs>
+              <linearGradient id="gradient1">
+                  <stop offset="0" stop-color="#FF0000"></stop>
+                  <stop offset="33%" stop-color="#00FF00"></stop>
+                  <stop offset="66%" stop-color="#FF69B4"></stop>
+                  <stop offset="100%" stop-color="#0000FF"></stop>
+              </linearGradient>
+              
+              <linearGradient x1="0" y1="0" x2="100%" y2="100%" 
+                    id="gradient2">
+                  <stop offset="0" stop-color="#FF0000"></stop>
+                  <stop offset="33%" stop-color="#00FF00"></stop>
+                  <stop offset="66%" stop-color="#FF69B4"></stop>
+                  <stop offset="100%" stop-color="#0000FF"></stop>
+              </linearGradient>
+         </defs>    
+        
+         <rect fill="url(#gradient1)" stroke="#000000" stroke-width="4"  
+            x="25" y="25" width="350" height="100"></rect>
+          
+          <rect fill="url(#gradient2)" stroke="#000000" stroke-width="4"  
+            x="25" y="150" width="350" height="100"></rect>
+        
+        </svg>
+    </body>
+</html>

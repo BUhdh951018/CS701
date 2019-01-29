@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Object Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+		
+		var person1 = {
+			"name" : "Bob",
+			"friends" : ["Dave", "Ed"],
+			age : 25,
+			job : "Software Engineer"
+		};
+
+		var jsonText = JSON.stringify(person1);
+		console.log(jsonText);
+
+		var person2 = JSON.parse(jsonText);
+		console.log(person2.job);
+		console.log(person2.friends);
+		
+    </script>
+    		<b>Output logged to console...</b>
+</body>
+</html>

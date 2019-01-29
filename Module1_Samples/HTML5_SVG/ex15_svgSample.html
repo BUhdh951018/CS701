@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SVG Sample - Text</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="html5.css">
+    </head>
+    <body>
+
+        <svg width="400" height="200">
+          <defs>
+            <path id="path1" d="M 50,180 Q 125,0 250,200"
+                fill="none" stroke="#000000" stroke-width="4">
+           </path>
+           
+          </defs>    
+        
+           <text font-family="san-serif" font-size="24px" 
+              fill="blue" >
+                <textPath xlink:href="#path1">
+                    Welcome to CS701! Suresh
+                </textPath>
+           </text>
+        
+        </svg>
+    </body>
+</html>

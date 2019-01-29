@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SVG Sample - Radial Gradients</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="html5.css">
+    </head>
+    <body>
+
+        <svg width="450" height="350">
+          <defs>
+              <radialGradient id="gradient1">
+                  <stop offset="0" stop-color="#FF0000"></stop>
+                  <stop offset="33%" stop-color="#00FF00"></stop>
+                  <stop offset="66%" stop-color="#FF69B4"></stop>
+                  <stop offset="100%" stop-color="#0000FF"></stop>
+             </radialGradient>
+              
+              <radialGradient cx="50%" cy="50%" r="50%" 
+                    fx="75%" fy="75%"  id="gradient2">
+                  <stop offset="0" stop-color="#FF0000"></stop>
+                  <stop offset="33%" stop-color="#00FF00"></stop>
+                  <stop offset="66%" stop-color="#FF69B4"></stop>
+                  <stop offset="100%" stop-color="#0000FF"></stop>
+             </radialGradient>
+              
+         </defs>    
+        
+          <circle fill="url(#gradient1)" cx="105" cy="150" r="100" 
+                stroke="#000000" stroke-width="4" > </circle>
+       
+          <circle fill="url(#gradient2)" cx="325" cy="150" r="100" 
+                stroke="#000000" stroke-width="4" > </circle>
+                
+        </svg>
+    </body>
+</html>

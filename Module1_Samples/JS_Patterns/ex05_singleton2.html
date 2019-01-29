@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Singleton Pattern Sample1</title>
+        <script type="text/javascript">
+			var mySingleton = (function() {
+
+				// Instance stores a reference to the Singleton
+				var instance;
+
+				function init() {
+					// Private methods and variables
+					function privateMethod() {
+						console.log("a private method");
+					}
+					var privateVariable = "a private variable";
+					var randomNumber = Math.random();
+
+					return {
+						// Public methods and variables
+						publicMethod : function() {
+							console.log("A public method");
+						},
+						publicProperty : "A public variable",
+						getRandomNumber : function() {
+							return randomNumber;
+						}
+					};
+				};
+
+				return {
+					// Get the Singleton instance
+					getInstance : function() {
+						if (!instance) {
+							instance = init();
+						}
+						return instance;
+					}
+				};
+			})();
+
+			// Usage
+			var singleA = mySingleton.getInstance();
+			var singleB = mySingleton.getInstance();
+			console.log(singleA.getRandomNumber() == 
+			             singleB.getRandomNumber());
+
+        </script>
+    </head>
+    <body>
+		<b>Output logged to console...</b>
+    </body>
+</html>
