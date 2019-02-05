@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>part2-canvas</title>
+
+<head>
+    <script src="circles1.js"></script>
+</head>
+
+<body>
+    <canvas id="testCanvas" style="border: 1px solid;" width="400" height="400"> </canvas>
+    <p></p>
+    <h3>Click on the above canvas to change color</h3>
+
+    <script>
+        (function (doc) {
+
+            var canvas = doc.getElementById("testCanvas");
+            var context = canvas.getContext("2d");
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var newpath = false;
+            // click event handler
+            canvas.onclick = function (e) {
+                //context.clearRect(0, 0, canvas.width, canvas.height);
+
+                // start a new path
+                newPath = true;
+                // mouse x and y relative to canvas
+                x = e.clientX - e.target.offsetLeft;
+                y = e.clientY - e.target.offsetTop;
+
+                var nextColor = randomColor();
+                context.fillStyle = nextColor;
+                context.beginPath();
+                context.arc(x, y, 30, 0, 2 * Math.PI, true);
+                context.fill();
+                context.closePath();
+            }
+
+        })(document);
+    </script>
+
+
+</html>
