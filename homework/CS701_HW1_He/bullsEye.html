@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>part1-canvas</title>
+    <script src="bullsEye.js"></script>
 </head>
 <body>
+    <canvas id="bullsEye" style="border: 1px solid;" width="400" height="400"></canvas>
+    <br/>
+    <label for="band">BandWidth:</label>
+    <input type="range" id="band" min="5" max="50" step="5" value="25" oninput="bullsEye.drawPattern()">
+    <br/>
+    <br/>
+    <label for="current">Current Band Width:&nbsp;<a id="current"></a></label>
     
 </body>
 </html>
