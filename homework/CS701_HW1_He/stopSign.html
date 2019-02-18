@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Part3-SVG</title>
+    <meta charset="utf-8">
+    <style>
+        svg {
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="600" height="600">
+        <g>
+            <polygon points="30,30 70,30 101,58 101,98 70,126 30,126 2,98 2,58" style="fill:red;stroke:grey;stroke-width:5"></polygon>
+            <text x="25" y="85" font-size="32px" fill="#ffffff">stop</text>
+        </g>
+        <g transform="translate(150 0) rotate(90 50 78)">
+            <polygon points="30,30 70,30 101,58 101,98 70,126 30,126 2,98 2,58" style="fill:red;stroke:grey;stroke-width:5"></polygon>
+            <text x="25" y="85" font-size="32px" fill="#ffffff">stop</text>
+        </g>
+        <g transform="translate(300 0) rotate(180 50 78)">
+            <polygon points="30,30 70,30 101,58 101,98 70,126 30,126 2,98 2,58" style="fill:red;stroke:grey;stroke-width:5"></polygon>
+            <text x="25" y="85" font-size="32px" fill="#ffffff">stop</text>
+        </g>
+        <g>
+            <polygon points="180,135 220,135 251,163 251,203 220,231 180,231 152,203 152,163" style="fill:red;stroke:grey;stroke-width:5">
+            </polygon>
+            <text x="175" y="190" font-size="32px" fill="#ffffff">stop</text>
+            <animateTransform attributeName="transform" begin="0s" dur="1s" type="rotate" from="0 200 183" to="360 200 183"
+                repeatCount="indefinite">
+            </animateTransform>
+        </g>
+    </svg>
+
+</body>
+
+</html>
