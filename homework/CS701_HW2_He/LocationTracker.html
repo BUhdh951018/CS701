@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Location Tracker</title>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="html5.css">
+</head>
+
+<body>
+    <header>
+        <h2>Location Tracker</h2>
+    </header>
+    <section>
+        <article>
+            <button id="startButton" onclick="getLocation()">Start</button>
+            <p></p>
+            <div id="status">
+                <p id="number">Update#:</p>
+                <p id="s_latitude">Start Latitude:</p>
+                <p id="s_longitude">Start Longitude:</p>
+                <p id="c_latitude">Current Latitude:</p>
+                <p id="c_longitude">Current Longitude:</p>
+            </div>
+            <p></p>
+            <div id="map">
+            </div>
+        </article>
+    </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=getLocation"
+        async defer></script>
+    <script src="LocationTracker.js"></script>
+</body>
+
+</html>
