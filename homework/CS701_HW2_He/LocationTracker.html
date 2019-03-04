@@ -4,7 +4,7 @@
 <head>
     <title>Location Tracker</title>
     <meta charset="utf-8">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="html5.css">
 </head>
 
@@ -14,7 +14,7 @@
     </header>
     <section>
         <article>
-            <button id="startButton" onclick="getLocation()">Start</button>
+            <button id="startButton">Start</button>
             <p></p>
             <div id="status">
                 <p id="number">Update#:</p>
@@ -28,9 +28,10 @@
             </div>
         </article>
     </section>
+    
+    <script src="LocationTracker.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaqp86Dew7QGyrmtCMV8cv83u0KN9ueAE&callback=getLocation"
         async defer></script>
-    <script src="LocationTracker.js"></script>
 </body>
 
 </html>
