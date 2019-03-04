@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang='en' ng-app>
+  <head>
+   <title>Book Shopping Cart</title>
+
+  <script src="js/angular10.js"></script>
+  <script>
+    function CartControler($scope) {
+      $scope.books = [
+        {title: 'Absolute Java',    
+            qty: 1, price: 114.95},
+        {title: 'Pro HTML5',        
+            qty: 1, price: 27.95},
+        {title: 'Head First HTML5', 
+            qty: 1, price: 27.89}
+      ];
+
+      $scope.removeBook = function(index) {
+        $scope.books.splice(index, 1);
+      }
+      
+      $scope.count = 0;
+      $scope.updateBookCount = function() {
+          console.log("updateBookCount...");
+          $scope.count = $scope.books.length;
+      }
+      
+      $scope.$watch('books', function() {
+          $scope.updateBookCount();
+      }, true)
+    }
+  </script>
+  <link rel="stylesheet" href="css/ex05.css">
+  </head>
+
+  <body ng-controller="CartControler" ng-init="updateBookCount()">
+
+    <table>
+      <caption><b>My Books</b></caption>
+      <thead>
+        <tr>
+            <th>Title</th>
+            <th>Qty</th>
+            <th>UnitPrice</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="book in books">
+        <tr>
+            <td>{{book.title}}</td>
+            <td>
+                <input ng-model="book.qty" size="2">
+            </td>
+            <td>{{book.price | currency}}</td>
+            <td>{{book.price * book.qty | currency}}</td>
+            <td>
+                <button ng-click="removeBook($index)">
+                    Remove
+                </button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    <b>Book Count : {{count}}</b>
+  </body>
+</html>
+
+

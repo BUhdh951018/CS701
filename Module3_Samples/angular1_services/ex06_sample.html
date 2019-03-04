@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Service Example6</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <script src="js/angular.js"></script>
+  <script src="ex06_app.js"></script>
+</head>
+<body>  
+  <div ng-controller="SampleController" 
+  					              class="container">
+  	  <div class="panel">
+  	  		<h4 class="panel-heading">$interval service</h4>
+  	  		<div class="panel-body">
+  	  			Current Local Date/Time <br/>
+  	  			{{time | date:'medium'}}
+  	  		</div>
+  	  </div>
+  </div>
+</body>
+</html>

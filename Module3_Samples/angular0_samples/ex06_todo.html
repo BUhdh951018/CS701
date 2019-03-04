@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="js/angular10.js"></script>
+    <script src="js/ex06_todo.js"></script>
+    <link rel="stylesheet" href="css/ex06_todo.css">
+  </head>
+  <body>
+    <h2>Todo List</h2>
+    <div ng-controller="TodoController">
+      <span>{{remaining()}} of {{todos.length}} remaining</span>
+      [ <a href="" ng-click="archive()">Archive</a> ]
+     
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="Add new todo here">
+        <input type="submit" value="Add">
+      </form>
+    
+    </div>
+  </body>
+</html>

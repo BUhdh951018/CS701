@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Service Example2</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <script src="js/angular.js"></script>
+  <script src="ex01_service.js"></script>
+  <script src="ex02_app.js"></script>
+</head>
+<body>  
+  <div ng-controller="SampleController" 
+  					              class="container">
+  	  <ul class="list-unstyled">
+  	  	 <li ng-repeat='quote in quotes' 
+  	  	     ng-click="doLog($index)"  
+  	  	     ng-dblclick="doAlert($index)">
+  	  	       {{quote}}
+  	  	 </li>
+  	  </ul>
+  </div>
+  <div ng-controller="ButtonController" 
+  	                     class="container">
+     <button ng-click="doLog()" 
+           class="btn-success" >Log</button>
+     <button ng-click="doAlert()" 
+           class="btn-danger" >Alert</button>
+  </div>
+</body>
+</html>

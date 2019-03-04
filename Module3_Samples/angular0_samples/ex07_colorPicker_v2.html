@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>Color Picker Version2</title>
+    <script src='js/angular10.js'></script>
+  </head>
+  <body ng-init='r=128; b=128; g=128;'>
+    
+    <h1 style='color: rgb({{r}},{{g}},{{b}});'>
+      Drag sliders to change color
+    </h1>
+    <input type='range' min='0' max='255' 
+          ng-model='r'>  Red   <br/>
+    <input type='range' min='0' max='255' 
+          ng-model='g'>  Green <br/>
+    <input type='range' min='0' max='255' 
+          ng-model='b'>  Blue  <br/>
+    <p></p>
+    Current Color: rgb({{r}},{{g}},{{b}})
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

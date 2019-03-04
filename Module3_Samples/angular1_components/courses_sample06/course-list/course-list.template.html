@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Search Sidebar-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query">
+      </p>
+
+      <p>
+        Sort by:
+
+        <select ng-model="$ctrl.orderProp">
+          <option ng-repeat="option in $ctrl.orderingOptions" 
+             value="{{option.value}}" 
+             ng-selected="option.value == $ctrl.orderProp">
+                {{option.text}}
+          </option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Main Content-->
+
+      <ul class="courses">
+        <li ng-repeat="course in $ctrl.courses | filter:$ctrl.query 
+                                               | orderBy:$ctrl.orderProp">
+         <div class="row">
+           <img ng-src="images/faculty/{{course.contact}}.jpeg" alt="None"/>
+            <a href="#!/courses/{{course.id}}">
+                     {{course.id | uppercase}} - {{course.name}}</a>
+            ({{course.type | uppercase}})
+        </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

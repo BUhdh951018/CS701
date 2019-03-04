@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="js/angular10.js"></script>
+    <script>
+      var courseList = 
+            [{name:'Information Structures',  id:'cs520'},
+             {name:'Web App Development',     id:'cs601'},
+             {name:'IT Project Management',   id:'cs632'},
+             {name:'Rich Internet App Dev',   id:'cs701'},
+             {name:'Enterprise Architecture', id:'cs783'}];
+
+      function CourseListController($scope) {
+        $scope.courses = courseList;
+      }
+    </script>
+  </head>
+ 
+  <body>
+    <b>Course List</b>
+    <ul ng-controller='CourseListController'>
+      <li ng-repeat='course in courses'>
+        <a href='http://www.bu.edu/csmet/{{course.id}}' 
+                    target=_blank>
+            [{{$index + 1}}] - 
+            {{course.id | uppercase}} - {{course.name}}
+            ({{$first}}, {{$middle}}, {{$last}})
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

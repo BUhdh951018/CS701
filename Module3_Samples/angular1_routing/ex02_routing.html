@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app="routingSample">
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="ex02_script.js"></script>
+  </head> 
+  <body>
+    <div ng-controller="MainController">
+      Select:
+      <a href="#/Course/cs520">CS520</a> |
+      <a href="#/Course/cs520/Term/spring">CS520:Spring Term</a> |
+      <a href="#/Course/cs701">CS701</a> |
+      <a href="#/Course/cs701/Term/spring?year=2018">CS701:Spring Term (2018)</a> 
+    
+      <div ng-view>
+         <!-- content will be injected here -->  
+      </div>
+     
+      <hr/>
+      <h3>Routing Info...</h3>
+        <span ng-non-bindable>{{$location.path()}}</span>:
+            {{$location.path()}}<br/>
+        <span ng-non-bindable>{{$route.current.templateUrl}}</span>:
+            {{$route.current.templateUrl}}<br/>
+        <span ng-non-bindable>{{$route.current.params}}</span>:
+            {{$route.current.params}}<br/>
+        <span ng-non-bindable>{{$route.current.scope.name}}</span>:
+            {{$route.current.scope.name}}<br/>
+        <span ng-non-bindable>{{$routeParams}}</span>:
+            {{$routeParams}}
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<html ng-app>
+<head>
+  <script src="js/angular10.js"></script>
+ <script>
+    function ParentController($scope) {
+      $scope.courseName = 'RIA';
+      $scope.courseId = 'CS701 A1';
+      $scope.tuition = 3000;
+    }
+
+    function ChildController($scope) {
+    	console.log($scope);
+      $scope.courseId = 'CS701 OL';
+      $scope.tuition = $scope.tuition + 200;
+    }
+    </script>
+</head>
+
+<body>
+  <div ng-controller="ParentController">
+      <div>
+        Course Details (Parent Scope): <br>
+            {{courseId}} - {{courseName}} - {{tuition | currency}}.
+      </div>
+      <p></p>
+      <div ng-controller="ChildController">
+        Course Details (Child  Scope): <br>
+            {{courseId}} - {{courseName}} - {{tuition | currency}}.
+      </div>
+      
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

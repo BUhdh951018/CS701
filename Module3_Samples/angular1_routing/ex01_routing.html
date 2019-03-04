@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="ex01_script.js"></script>
+    <link href="css/bootstrap-combined.min.css"
+         rel="stylesheet" />
+  </head> 
+  <body ng-controller="homeController">
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/contact">Contact</a></li>
+            <li><a href="#/foo">Error</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+     
+    <div id="main">
+        <div ng-view>
+          <!-- content will be injected here -->     
+        </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

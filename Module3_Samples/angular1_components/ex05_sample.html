@@ -1,0 +1,22 @@
+<!doctype html>
+<html  ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Components Example1</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <script src="js/angular.js"></script>
+  <script src="ex05_components.js"></script>
+</head>
+<body>  
+
+  <div class="container" 
+        ng-controller="HelloController as hc">  
+    
+    Parent Count: {{hc.myCount}}
+    <hr/>
+    <my-counter count="hc.myCount"> </count>
+    
+  </div>
+  
+</body>
+</html>

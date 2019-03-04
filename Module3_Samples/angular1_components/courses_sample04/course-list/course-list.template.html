@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Search Sidebar-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query">
+      </p>
+
+      <p>
+        Sort by:
+       
+        <select ng-model="$ctrl.orderProp">
+          <option ng-repeat="option in $ctrl.orderingOptions" 
+             value="{{option.value}}" 
+             ng-selected="option.value == $ctrl.orderProp">
+                {{option.text}}
+          </option>
+        </select>
+
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Main Content-->
+
+      <ul>
+        <li ng-repeat="course in $ctrl.courses | filter:$ctrl.query 
+                                               | orderBy:$ctrl.orderProp">
+          <span>{{course.id | uppercase}}</span>
+          <p>{{course.name}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

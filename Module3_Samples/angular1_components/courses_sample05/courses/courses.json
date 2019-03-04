@@ -1,0 +1,22 @@
+[
+   {"id": "cs520", "type": "core", "contact": "kalathur",
+        "name": "Information Structures"},
+   {"id": "cs546", "type": "elective", "contact": "temkin",
+        "name": "Quantitative Methods for Information Systems"},
+   {"id": "cs601", "type": "elective", "contact": "kalathur",
+        "name": "Web Application Development"},
+   {"id": "cs602", "type": "elective", "contact": "kalathur",
+        "name": "Server-Side Web Development"},
+   {"id": "cs625", "type": "core", "contact": "day",
+        "name": "Business Data Comm and Networks"},
+   {"id": "cs669", "type": "core", "contact": "rschudy",
+        "name": "Database Design and Impl for Business"},
+   {"id": "cs682", "type": "core", "contact": "kanabar",
+        "name": "Information Systems Analysis and Design"},
+   {"id": "cs683", "type": "elective", "contact": "braude",
+        "name": "Mobile Application Development"},  
+  {"id": "cs701", "type": "elective", "contact": "kalathur",
+        "name": "Rich Internet Appl Development"},
+   {"id": "cs782", "type": "core", "contact": "kanabar",
+        "name": "IT Strategy and Management"}
+]

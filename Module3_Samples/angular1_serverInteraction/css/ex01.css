@@ -1,0 +1,5 @@
+table { margin: 1em; border-collapse: collapse; }
+th, td { padding: .3em; border: 1px #ccc solid; }
+th { background-color: #953B39 }
+tr:nth-child(even) {background: #def;}
+tr:nth-child(odd) {background: #fff;}

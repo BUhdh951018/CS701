@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <script src="js/angular157.js"></script>
+    <script src="js/ex04_controller3.js"></script>
+    <script src="js/ex04_filter3.js"></script>
+  </head>
+  <body>
+   <div ng-controller='HelloController'>
+    <input ng-model='greeting'>
+    <p>{{greeting | underscore}}, Welcome to CS701!</p>
+  </div>
+  </body>
+</html>
+
