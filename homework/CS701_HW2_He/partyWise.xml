@@ -2,43 +2,44 @@
 	
 	<senator>
 		<name>Chuck Schumer</name>
-		<party>false</party>
+		<party>Democrat</party>
 	</senator>
 	<senator>
 		<name>Dick Durbin</name>
-		<party>false</party>
+		<party>Democrat</party>
 	</senator>
 	<senator>
 		<name>Patty Murray</name>
-		<party>false</party>
+		<party>Democrat</party>
 	</senator>
 	<senator>
 		<name>Bernie Sanders</name>
-		<party>false</party>
+		<party>Democrat</party>
 	</senator>
 	<senator>
 		<name>Elizabeth Warren</name>
-		<party>false</party>
+		<party>Democrat</party>
 	</senator>
+	
 	<senator>
 		<name>Mitch McConnell</name>
-		<party>false</party>
+		<party>Republican</party>
 	</senator>
 	<senator>
 		<name>Marco Rubio</name>
-		<party>false</party>
+		<party>Republican</party>
 	</senator>
 	<senator>
 		<name>Tom Cotton</name>
-		<party>false</party>
+		<party>Republican</party>
 	</senator>
 	<senator>
 		<name>Rand Paul</name>
-		<party>false</party>
+		<party>Republican</party>
 	</senator>
 	<senator>
 		<name>Roy Blunt</name>
-		<party>false</party>
+		<party>Republican</party>
 	</senator>
 
 </senators>
