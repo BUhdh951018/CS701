@@ -1,0 +1,25 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+  margin-top: 0;
+}
+
+/* View: Course list */
+.courses {
+  list-style: none;
+}
+
+.courses li {
+  clear: both;
+  height: 75px;
+  padding-top: 15px;
+}
+
+.courses img {
+  width: 50px;
+}
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filter">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+    <script src="js/angular16.js"></script>
+    <script src="filter.js"></script>
+    <style>
+        body {
+            font-size: 20px
+        }
+
+        input {
+            margin: 10px 0px 0px 5px
+        }
+    </style>
+</head>
+
+<body ng-controller="FilterController">
+    <div>Input:<input type="text" ng-model="input"></div>
+    <div>Delimiter:<input type="text" ng-model="delimiter"></div>
+    <p>{{input | tokenize}} (Default)</p>
+    <p>{{input | tokenize:delimiter}} (With Option)</p>
+</body>
+
+</html>
